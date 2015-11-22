@@ -1,7 +1,25 @@
-# How to turn your database into a ReSTful API in under 10 lines
+# How to turn your database into a ReSTful API in under 10 lines of code
 
-This tutorial will show you how to turn your database into a ReSTful
-API in just 10 lines of code.
+A package to turn your database into a ReSTful API in just 10 lines of code.
+
+## Installation
+
+TODO
+
+## Running your API
+
+```bash
+auto-api "mysql://localhost:3306/mydatabase"
+```
+
+You will need to pass the appropriate Database URI according to the 
+[SQLALchemy Engine Configuration documentation](http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html)
+More or less it's simply `'dialect+driver://username:password@host:port/database'`
+The driver is simply if you do not wish to use the default.  If you get import errors
+that probable means that you need to install a specific driver for your database and specify
+it in the URI.
+
+## Tutorial
 
 The tutorial will use a powerful and extensible ReST framework called
 [ripozo](https://github.com/vertical-knowledge/ripozo) and a couple
@@ -12,7 +30,7 @@ desire.  Currently, there are packages to make integration with Flask and Django
 incredibly painless.  In addition to building seamless ReSTful API's, ripozo allows
 you to create Hypermedia/HATEOAS driven API's with no additional effort.
 
-## Step 1: Create the Flask App
+### Step 1: Create the Flask App
 
 The first step is to setup our [Flask](https://github.com/mitsuhiko/flask) application.
 You can use [Django](https://www.djangoproject.com/) with 
@@ -32,7 +50,7 @@ from flask import Flask
 app = Flask(__name__)
 ```
 
-## Step 2: Setup SQLAlchemy
+### Step 2: Setup SQLAlchemy
 
 [SQLAlchemy](http://www.sqlalchemy.org/) is another favorite tool of mine.  It provides
 an excellent ORM and in addition it allows us to generate an ORM from an existing database
@@ -61,7 +79,7 @@ base.prepare(engine, reflect=True)
 This creates an ORM where we can access the tables in the database
 as if they were python objects.
 
-## Step 3: Bind ripozo
+### Step 3: Bind ripozo
 
 Now that we have our database and web application working we need to bind 
 [ripozo](https://github.com/vertical-knowledge/ripozo) to Flask and SQLAlchemy.
@@ -88,7 +106,7 @@ dispatcher.register_adapters(adapters.SirenAdapter, adapters.HalAdapter)
 session_handler = ScopedSessionHandler(engine)
 ```
 
-## Step 4: Expose our database
+### Step 4: Expose our database
 
 At this point we have done all of the necessary setup.  We can simply
 expose our database as a ReSTful API.
@@ -106,7 +124,7 @@ dispatcher.register_resources(*resources)
 app.run()
 ```
 
-## Step 5: Putting it all together
+### Step 5: Putting it all together
 
 We now have everything that we need so we're going to put it all together
 into one function that you simply pass a database URI to.
