@@ -133,6 +133,7 @@ def create_app(database_uri):
 
     resources = [create_resource(model, session_handler) for model in base.classes]
     dispatcher.register_resources(*resources)
+    
     app.run()
 ```
 

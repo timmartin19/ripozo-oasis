@@ -31,7 +31,7 @@ def create_app(database_uri):
     base = automap_base()
     base.prepare(engine, reflect=True)
 
-    # Create the ripozo dispatcher and register the protocols that can be returned
+    # Create the ripozo dispatcher and register the response formats
     dispatcher = FlaskDispatcher(app)
     dispatcher.register_adapters(adapters.SirenAdapter, adapters.HalAdapter)
     session_handler = ScopedSessionHandler(engine)
