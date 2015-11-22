@@ -2,11 +2,16 @@
 
 A package to turn your database into a ReSTful API in just 10 lines of code.
 
+You can either install the package and simply start the API from the
+command line or you can follow the tutorial to see how to build it youself.
+
 ## Installation
 
 TODO
 
 ## Running your API
+
+To turn your database into a ReSTful API simply run the following command.
 
 ```bash
 auto-api "mysql://localhost:3306/mydatabase"
