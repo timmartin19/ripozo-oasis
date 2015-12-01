@@ -172,6 +172,6 @@ creating ReSTful API's.  With [ripozo](https://github.com/vertical-knowledge/rip
 you can include authentication and authorization, additional endpoints and much more.
 [Ripozo](https://github.com/vertical-knowledge/ripozo) is designed to be flexible and 
 efficient at the same time.  It provides shortcuts
-while priotizing extensibility.  It exposes more flexibility and power than 
+while priotizing extensibility.  It unleashes more flexibility and power than 
 any other Hypermedia/HATEOAS ReSTful framework.  Ripozo: less effort, better APIs. 
 
