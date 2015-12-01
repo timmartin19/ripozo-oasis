@@ -23,7 +23,8 @@ You will need to pass a Database URI according to the
 [SQLALchemy Engine Configuration documentation](http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html).
 The format is `'dialect+driver://username:password@host:port/database_name'`.
 The driver is optional and only necessary if you do not wish to use the default.  If you get import errors
-you will need to install a specific driver for your database.
+you will need to install a specific driver for your database.  For example, with MySQL you'll need
+to run ``pip install mysql-python`` or for postgresql you'll need to run ``pip install psycopg2``.
 
 ## Tutorial
 

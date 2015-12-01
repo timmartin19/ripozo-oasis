@@ -10,7 +10,7 @@ from api_builder import create_app
 
 
 @click.command()
-@click.option('database_uri', required=False)
+@click.argument('database_uri', required=False)
 @click.option('-p', '--port', type=int, help='The port of the database that you wish to expose')
 @click.option('-h', '--host', type=str, help='The data base host e.g. "localhost"')
 @click.option('-d', '--dialect', type=str, help='The database dialect e.g. "mysql" or "postgres"')
@@ -43,4 +43,4 @@ def auto_ripozo_db(app_port, debug, password, user, name, driver, dialect, host,
 
 
 def run_commands():
-    auto_ripozo_db.run()
+    auto_ripozo_db()
