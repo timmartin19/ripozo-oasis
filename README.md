@@ -66,7 +66,7 @@ pip install SQLAlchemy
 ```
 
 Creating a sqlalchemy engine is incredibly simple.  We simply
-pass SQLAlchemy a database uri in the expected format.  See
+pass SQLAlchemy a database URI in the expected format.  See
 the [Engine Configuration documentation](http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html)
 for more details. TL;DR this is the general format: 
 `'dialect+driver://username:password@host:port/database_name'`
