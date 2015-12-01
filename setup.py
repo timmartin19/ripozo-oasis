@@ -12,7 +12,7 @@ setup(
     author_email='tim.martin@vertical-knowledge.com',
     entry_points={
         'console_scripts': [
-            'ripozo-oasis = cli_commands:run_commands'
+            'ripozo-oasis = ripozo_oasis.cli_commands:run_commands'
         ]
     },
     extras_require={
@@ -29,6 +29,6 @@ setup(
         'sqlalchemy>=1.0.0'
     ],
     name='ripozo-oasis',
-    packages=find_packages(include=['api_builder', 'cli_commands']),
+    packages=find_packages(include=['ripozo_oasis', 'ripozo_oasis.*']),
     version=version
 )

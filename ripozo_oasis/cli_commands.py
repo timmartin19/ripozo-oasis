@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import click
 from sqlalchemy.engine.url import URL
 
-from api_builder import create_app
+from ripozo_oasis.api_builder import create_app
 
 
 @click.command()
@@ -43,4 +43,7 @@ def auto_ripozo_db(app_port, debug, password, user, name, driver, dialect, host,
 
 
 def run_commands():
+    auto_ripozo_db()
+
+if __name__ == '__main__':
     auto_ripozo_db()
