@@ -3,7 +3,7 @@
 A package to turn your database into a ReSTful API in just 10 lines of code.
 
 You can either install the package and simply start the API from the
-command line or you can follow the tutorial to see how to build it youself.
+command line or you can follow this tutorial to build it youself.
 
 ## Installation
 
@@ -25,7 +25,7 @@ you will need to install a specific driver for your database.
 
 ## Tutorial
 
-The tutorial uses a powerful and extensible ReST framework called
+This tutorial uses a powerful and extensible ReST framework called
 [ripozo](https://github.com/vertical-knowledge/ripozo) and a couple
 packages in the ripozo ecosystem: [flask-ripozo](https://github.com/vertical-knowledge/flask-ripozo)
 and [ripozo-sqlalchemy](https://github.com/vertical-knowledge/ripozo-sqlalchemy).  Ripozo
