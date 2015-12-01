@@ -3,7 +3,7 @@
 A package to turn your database into a ReSTful API in just 10 lines of code.
 
 You can either install the package and simply start the API from the
-command line or you can follow this tutorial to build it youself.
+command line or you can follow this tutorial to build it yourself.
 
 ## Installation
 
