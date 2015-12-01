@@ -22,7 +22,7 @@ setup(
     },
     install_requires=[
         'click==5.1',
-        'flask',
+        'Flask',
         'ripozo>=1.2.0',
         'flask-ripozo>=1.0.0',
         'ripozo-sqlalchemy>=1.0.0',
