@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 from setuptools import setup, find_packages
 
-version = '0.1.0.dev0'
+version = '0.1.0'
 
 setup(
     author='Tim Martin',
