@@ -12,7 +12,7 @@ setup(
     author_email='tim.martin@vertical-knowledge.com',
     entry_points={
         'console_scripts': [
-            'ripozo-oasis = commands:run_commands'
+            'ripozo-oasis = cli_commands:run_commands'
         ]
     },
     extras_require={
