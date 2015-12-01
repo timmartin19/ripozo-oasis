@@ -5,12 +5,19 @@ from __future__ import unicode_literals
 
 from setuptools import setup, find_packages
 
+version = '0.1.0.dev0'
+
 setup(
     author='Tim Martin',
     author_email='tim.martin@vertical-knowledge.com',
     entry_points={
         'console_scripts': [
-            'auto-api = commands:run_commands'
+            'ripozo-oasis = commands:run_commands'
+        ]
+    },
+    extras_require={
+        'dev': [
+            'zest.releaser'
         ]
     },
     install_requires=[
@@ -20,6 +27,7 @@ setup(
         'ripozo-sqlalchemy>=1.0.0',
         'sqlalchemy>=1.0.0'
     ],
-    name='ripozo-auto-database',
-    packages=find_packages(include=['api_builder', 'commands'])
+    name='ripozo-oasis',
+    packages=find_packages(include=['api_builder', 'commands']),
+    version=version
 )
