@@ -162,7 +162,7 @@ And just like that we have exposed our database as a ReSTful API.  Additionally,
 because this is [ripozo](https://github.com/vertical-knowledge/ripozo), if a table
 has a relationship to another table, a link to the corresponding row/resource is 
 automatically generated.  For example, consider a user table has a Many-to-One relationship with a group table.
-When we go to a user's endpoint, we'll get a fully qualified url linking to the associated group's endpoint.
+When we go to a user's endpoint, we'll get a fully qualified URL linking to the associated group's endpoint.
 
 
 ## Conclusion
