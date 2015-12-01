@@ -7,7 +7,9 @@ command line or you can follow this tutorial to build it yourself.
 
 ## Installation
 
-TODO
+```bash
+pip install ripozo-oasis
+```
 
 ## Running your API
 
