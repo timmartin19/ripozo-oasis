@@ -93,8 +93,6 @@ Now that we have our database and web application working, we need to bind
 pip install ripozo flask-ripozo ripozo-sqlalchemy
 ```
 
-Now in our code:
-
 ```python
 from flask_ripozo import FlaskDispatcher
 from ripozo import adapters
@@ -111,7 +109,7 @@ session_handler = ScopedSessionHandler(engine)
 
 ### Step 4: Expose our database
 
-Now that we have complete all necessary setup, we can
+Now that we have completed all necessary setup, we can
 expose our database as a ReSTful API.
 
 ```python
