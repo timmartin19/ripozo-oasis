@@ -1,7 +1,7 @@
 CHANGELOG
 `````````
 
-1.0.1 (unreleased)
+1.0.1 (2015-12-01)
 ==================
 
 - Flipped order of adapters.
