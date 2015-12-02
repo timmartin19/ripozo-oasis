@@ -32,9 +32,85 @@ Now we can curl the base to get all available endpoints
 curl -X OPTIONS http://localhost:5000/
 ```
 
-We may see something like this
+We may see something like this assuming we had two tables, groups and users.
 
 ```javascript
+{
+  "_embedded": {},
+  "_links": {
+    "group": {
+      "href": "/group/"
+    },
+    "user": {
+      "href": "/user/"
+    },
+    "self": {
+      "href": "http://localhost:5000/"
+    }
+  }
+}
+```
+
+We could additionally vary the accept type to get a SIREN formatted response
+
+```bash
+curl -X OPTIONS -H "Accept: application/vnd.siren+json" http://localhost:5000/
+```
+
+```javascript
+{
+  "entities": [],
+  "class": [
+    ""
+  ],
+  "links": [
+    {
+      "href": "http://localhost:5000/",
+      "rel": [
+        "self"
+      ]
+    },
+    {
+      "href": "http://localhost:5000/group/",
+      "rel": [
+        "group_list"
+      ]
+    },
+    {
+      "href": "http://localhost:5000/group/<id>/",
+      "rel": [
+        "group"
+      ]
+    },
+    {
+      "href": "http://localhost:5000/user/",
+      "rel": [
+        "user_list"
+      ]
+    },
+    {
+      "href": "http://localhost:5000/user/<id>/",
+      "rel": [
+        "user"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "fields": [],
+      "href": "http://localhost:5000/",
+      "title": "All Options",
+      "method": "OPTIONS",
+      "name": "all_options"
+    }
+  ],
+  "properties": {}
+}
+```
+
+We have full CRUD+L (Create, Retrieve, Update, Delete and List) operations: a POST to ``/user/`` creates
+a new user, a GET to ``/user/`` returns a list of all users, a GET on ``/user/<id>/``
+returns an individual user and so forth.
 
 ## Tutorial
 
