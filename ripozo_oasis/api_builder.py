@@ -37,6 +37,7 @@ def create_app(database_uri):
     session_handler = ScopedSessionHandler(engine)
 
     # Create and register resources from the sqlalchemy models
-    resources = [create_resource(model, session_handler) for model in base.classes]
+    # We need to pass ``append_slash=True`` due to a quirk in how flask handles routing
+    resources = [create_resource(model, session_handler, append_slash=True) for model in base.classes]
     dispatcher.register_resources(*resources)
     return app

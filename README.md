@@ -118,7 +118,8 @@ expose our database as a ReSTful API.
 ```python
 # The create_resource method is a shortcut for creating ripozo resources 
 # containing common sets of endpoints.
-resources = [create_resource(model, session_handler) for model in base.classes]
+# We need to pass append_slash=True due to a quirk in how flask handles routing
+resources = [create_resource(model, session_handler, append_slash=True) for model in base.classes]
 # Register the resources with the adapter to expose them in the API.
 dispatcher.register_resources(*resources)
 
@@ -155,7 +156,7 @@ def create_app(database_uri):
     dispatcher.register_adapters(adapters.SirenAdapter, adapters.HalAdapter)
     session_handler = ScopedSessionHandler(engine)
 
-    resources = [create_resource(model, session_handler) for model in base.classes]
+    resources = [create_resource(model, session_handler, append_slash=True) for model in base.classes]
     dispatcher.register_resources(*resources)
     
     app.run()
