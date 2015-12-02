@@ -60,39 +60,21 @@ curl -X OPTIONS -H "Accept: application/vnd.siren+json" http://localhost:5000/
 ```javascript
 {
   "entities": [],
-  "class": [
-    ""
-  ],
+  "class": [""],
   "links": [
     {
       "href": "http://localhost:5000/",
-      "rel": [
-        "self"
-      ]
+      "rel": ["self"]
     },
     {
       "href": "http://localhost:5000/group/",
-      "rel": [
-        "group_list"
-      ]
+      "rel": ["group_list"]
     },
     {
       "href": "http://localhost:5000/group/<id>/",
-      "rel": [
-        "group"
-      ]
+      "rel": ["group"]
     },
-    {
-      "href": "http://localhost:5000/user/",
-      "rel": [
-        "user_list"
-      ]
-    },
-    {
-      "href": "http://localhost:5000/user/<id>/",
-      "rel": [
-        "user"
-      ]
+    ...
     }
   ],
   "actions": [
