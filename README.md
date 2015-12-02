@@ -16,7 +16,7 @@ pip install ripozo-oasis
 To turn your database into a ReSTful API simply run the following command.
 
 ```bash
-auto-api "mysql://localhost:3306/mydatabase"
+ripozo-oasis "mysql://localhost:3306/mydatabase"
 ```
 
 You will need to pass a Database URI according to the 
