@@ -4,7 +4,7 @@ CHANGELOG
 0.1.3 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Clean up
 
 
 0.1.2 (2015-12-01)

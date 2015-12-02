@@ -22,10 +22,10 @@ setup(
     },
     install_requires=[
         'click==5.1',
-        'Flask',
+        'Flask==0.10.1',
         'ripozo>=1.2.0',
         'flask-ripozo>=1.0.0',
-        'ripozo-sqlalchemy>=1.0.0',
+        'ripozo-sqlalchemy>=1.0.1',
         'sqlalchemy>=1.0.0'
     ],
     name='ripozo-oasis',
