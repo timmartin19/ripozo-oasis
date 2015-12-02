@@ -3,6 +3,8 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 
+import traceback
+
 import click
 from sqlalchemy.engine.url import URL
 
@@ -38,8 +40,23 @@ def auto_ripozo_db(app_port, debug, password, user, name, driver, dialect, host,
         dialect = '{0}+{1}'.format(dialect, driver) if driver else dialect
         database_uri = URL(dialect, username=user, password=password, host=host,
                            port=port, database=name)
-    app = create_app(database_uri)
-    app.run(debug=debug, port=app_port)
+
+    try:
+        app = create_app(database_uri)
+    except ImportError:
+        traceback.print_exc()
+        print()
+        print("It appears there was an import error.  Typically,"
+              " this is because you are missing the driver.  Simply "
+              "pip install the driver you prefer for your database and "
+              "try again.")
+        print("For example, for MySQL `pip install MySQL-python` or "
+              "for PostGreSQL: `pip install psycopg2`.  ")
+        print("Check out this link for more details: "
+              "http://docs.sqlalchemy.org/en/rel_1_0/core/engines.html")
+        print()
+    else:
+        app.run(debug=debug, port=app_port)
 
 
 def run_commands():
