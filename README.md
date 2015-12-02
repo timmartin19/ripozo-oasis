@@ -5,6 +5,9 @@ A package to turn your database into a ReSTful API in just 10 lines of code.
 You can either install the package and simply start the API from the
 command line or you can follow [this tutorial](#tutorial) to build it yourself.
 
+**NOTE**: This is not intended for production.  It's more of a "Look at the cool stuff I can
+do with some of my favorite tools" kind of package.
+
 ## Installation
 
 ```bash
