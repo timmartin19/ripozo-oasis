@@ -4,7 +4,7 @@ CHANGELOG
 1.0.1 (unreleased)
 ==================
 
-- Nothing changed yet.
+- Flipped order of adapters.
 
 
 1.0.0 (2015-12-01)
