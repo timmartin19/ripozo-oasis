@@ -33,7 +33,7 @@ def create_app(database_uri):
 
     # Create the ripozo dispatcher and register the response formats
     dispatcher = FlaskDispatcher(app)
-    dispatcher.register_adapters(adapters.SirenAdapter, adapters.HalAdapter)
+    dispatcher.register_adapters(adapters.HalAdapter, adapters.SirenAdapter)
     session_handler = ScopedSessionHandler(engine)
 
     # Create and register resources from the sqlalchemy models

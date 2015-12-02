@@ -26,6 +26,16 @@ The driver is optional and only necessary if you do not wish to use the default.
 you will need to install a specific driver for your database.  For example, with MySQL you'll need
 to run ``pip install mysql-python`` or for postgresql you'll need to run ``pip install psycopg2``.
 
+Now we can curl the base to get all available endpoints
+
+```bash
+curl -X OPTIONS http://localhost:5000/
+```
+
+We may see something like this
+
+```javascript
+
 ## Tutorial
 
 This tutorial uses a powerful and extensible ReST framework called
@@ -153,7 +163,7 @@ def create_app(database_uri):
     base.prepare(engine, reflect=True)
 
     dispatcher = FlaskDispatcher(app)
-    dispatcher.register_adapters(adapters.SirenAdapter, adapters.HalAdapter)
+    dispatcher.register_adapters(adapters.HalAdapter, adapters.SirenAdapter)
     session_handler = ScopedSessionHandler(engine)
 
     resources = [create_resource(model, session_handler, append_slash=True) for model in base.classes]
