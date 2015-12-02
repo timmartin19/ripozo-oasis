@@ -3,7 +3,7 @@
 A package to turn your database into a ReSTful API in just 10 lines of code.
 
 You can either install the package and simply start the API from the
-command line or you can follow this tutorial to build it yourself.
+command line or you can follow [this tutorial](#tutorial) to build it yourself.
 
 ## Installation
 
@@ -94,7 +94,7 @@ We have full CRUD+L (Create, Retrieve, Update, Delete and List) operations: a PO
 a new user, a GET to ``/user/`` returns a list of all users, a GET on ``/user/<id>/``
 returns an individual user and so forth.
 
-## Tutorial
+## <a name="tutorial"></a> Tutorial
 
 This tutorial uses a powerful and extensible ReST framework called
 [ripozo](https://github.com/vertical-knowledge/ripozo) and a couple
