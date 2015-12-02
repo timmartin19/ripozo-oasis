@@ -26,13 +26,13 @@ The driver is optional and only necessary if you do not wish to use the default.
 you will need to install a specific driver for your database.  For example, with MySQL you'll need
 to run ``pip install mysql-python`` or for postgresql you'll need to run ``pip install psycopg2``.
 
-Now we can curl the base to get all available endpoints
+Now we can curl the root url to get all available endpoints
 
 ```bash
 curl -X OPTIONS http://localhost:5000/
 ```
 
-We may see something like this assuming we had two tables, groups and users.
+Assuming we had two tables, groups and users, we would see the following.
 
 ```javascript
 {
@@ -51,7 +51,7 @@ We may see something like this assuming we had two tables, groups and users.
 }
 ```
 
-We could additionally vary the accept type to get a SIREN formatted response
+We could additionally vary the Accept header to get a SIREN formatted response
 
 ```bash
 curl -X OPTIONS -H "Accept: application/vnd.siren+json" http://localhost:5000/
